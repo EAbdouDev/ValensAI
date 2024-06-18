@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const CasesPage: FC<pageProps> = ({}) => {
   return (
     <>
-      <div className="w-full h-full p-4  max-w-5xl mx-auto 2xl:my-16 my-4 pb-20">
+      <div className="w-full h-full p-4  max-w-7xl mx-auto 2xl:my-10 my-4 pb-20">
         <section>
           <h1 className="text-2xl font-semibold">Your Cases</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 w-full h-full mt-6 ">

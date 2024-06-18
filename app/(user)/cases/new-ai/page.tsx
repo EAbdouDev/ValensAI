@@ -178,7 +178,7 @@ const NewCaseAIPage: FC<pageProps> = ({}) => {
                       {results &&
                       results.medicalHistory &&
                       Array.isArray(results.medicalHistory.medications)
-                        ? results.medicalHistory.medications.map((m) => (
+                        ? results.medicalHistory.medications.map((m: any) => (
                             <span key={m}>- {m}</span>
                           ))
                         : "N/A"}

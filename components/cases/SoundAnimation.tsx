@@ -25,7 +25,7 @@ const SoundReactiveAnimation: React.FC = () => {
         analyserRef.current = analyser;
       }
 
-      const bufferLength = analyserRef.current.frequencyBinCount;
+      const bufferLength = analyserRef!.current!.frequencyBinCount;
       const dataArray = new Uint8Array(bufferLength);
 
       const detectSound = () => {

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-const DisplayData = ({ data, level = 1 }) => {
+const DisplayData = ({ data, level = 1 }: any) => {
   if (!data || typeof data !== "object") return null;
 
   return (

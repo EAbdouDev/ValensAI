@@ -8,7 +8,7 @@ const CaseCard: FC<CaseCardProps> = ({}) => {
   return (
     <Link
       href={"/case"}
-      className="flex flex-col justify-start items-start gap-6 dark:bg-[#101010] shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] dark:shadow-none    p-3 rounded-xl "
+      className="flex flex-col justify-start items-start gap-6 dark:bg-[#101010] shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] dark:shadow-none    py-3 px-4 rounded-xl "
     >
       <div className="header flex justify-between items-center w-full">
         <span className="flex justify-center items-center p-2 rounded-full dark:bg-[#212121] dark:text-white ">

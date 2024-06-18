@@ -9,8 +9,8 @@ const sansFont = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | MedSim AI",
-    default: "MedSim AI",
+    template: "%s | Valens AI",
+    default: "Valens AI",
   },
   description: "An assistant to help medical studnets.",
 };

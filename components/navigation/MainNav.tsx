@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 interface MainNavProps {}
 
@@ -41,7 +42,7 @@ const MainNav: FC<MainNavProps> = ({}) => {
       icon: <LayoutDashboard className="w-5 h-5" />,
     },
     {
-      name: "Cases",
+      name: "Cases ",
       href: "/cases",
       active: pathname.includes("case"),
       icon: <ClipboardPlus className="w-5 h-5" />,
@@ -71,12 +72,28 @@ const MainNav: FC<MainNavProps> = ({}) => {
 
   return (
     <div
-      className={`w-full h-[60px] flex justify-between items-center px-4 py-9 lg:px-6 backdrop-blur-md border-b `}
+      className={`w-full h-[60px] flex justify-between items-center px-4 py-9 lg:px-6 backdrop-blur-md border-b bg-transparent `}
     >
       <div className="Branding flex justify-center items-center gap-2">
         <span className="flex justify-center items-center gap-2">
-          <h1 className="font-bold text-xl">MedSim AI</h1>
-          <p className="border border-black dark:border-white font-semibold p-1 rounded-sm text-xs  ">
+          {isDark ? (
+            <Image
+              src="/valenis-ai-logo01-dark-01.png"
+              alt="logo"
+              width={150}
+              height={150}
+            />
+          ) : (
+            <Image
+              src="/valenis-ai-logo01-02-04-01-01.png"
+              alt="logo"
+              width={150}
+              height={150}
+            />
+          )}
+          {/* <h1 className="font-bold text-xl">MedSim AI</h1> */}
+
+          <p className="border border-[#e9e9e9] dark:border-[#898989] font-semibold p-1 rounded-sm text-xs  ">
             Experimental
           </p>
         </span>
@@ -86,10 +103,10 @@ const MainNav: FC<MainNavProps> = ({}) => {
             <Link
               key={link.name}
               href={`${link.href}`}
-              className={`  ${
+              className={`  flex justify-center items-center h-fit  px-4 py-2  ${
                 link.active
-                  ? "text-blue-600 dark:text-blue-400 opacity-100 "
-                  : "  opacity-70"
+                  ? "dark:bg-[#1f1f1f] bg-[#e3e3e3] opacity-100  "
+                  : "  opacity-60 hover:opacity-100 transition-all ease-in-out"
               } font-medium flex justify-start items-center gap-2 w-full p-3  rounded-md transition-all ease-in-out`}
             >
               {" "}
