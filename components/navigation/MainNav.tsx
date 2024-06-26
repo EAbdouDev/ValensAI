@@ -93,12 +93,12 @@ const MainNav: FC<MainNavProps> = ({}) => {
           )}
           {/* <h1 className="font-bold text-xl">MedSim AI</h1> */}
 
-          <p className="border border-[#e9e9e9] dark:border-[#898989] font-semibold p-1 rounded-sm text-xs  ">
-            Experimental
+          <p className="border border-[#e9e9e9] dark:border-[#898989] font-semibold px-2 py-1 rounded-full text-xs opacity-70  ">
+            EXPERIMENTAL
           </p>
         </span>
 
-        <div className="flex justify-start items-center gap-4 ml-6">
+        <div className="flex justify-start items-center gap-4 ml-8">
           {links.map((link) => (
             <Link
               key={link.name}
@@ -130,7 +130,7 @@ const MainNav: FC<MainNavProps> = ({}) => {
           </PopoverTrigger>
           <PopoverContent
             sideOffset={10}
-            className="mr-4  flex flex-col justify-start overflow-hidden p-0 dark:bg-[#151515]"
+            className="mr-4  flex flex-col justify-start overflow-hidden p-0 dark:bg-[#151515] "
           >
             <div className="flex justify-start items-center gap-4 max-w-full border-b p-4">
               <div>
