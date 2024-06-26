@@ -95,22 +95,31 @@ const CustomCaseForm: FC<CustomCaseFormProps> = ({}) => {
               >
                 <div className="flex justify-between items-center w-full ">
                   <label className="font-medium">{field.label}</label>
-                  {field.option ? (
-                    <button
-                      className="underline opacity-80 hover:opacity-100 transition-all ease-in-out"
-                      onClick={() => {
-                        if (field.option?.type === "generate_name") {
-                          handleGenerateName(field.name);
+
+                  {
+                    //@ts-ignore
+                    field.option ? (
+                      <button
+                        className="underline opacity-80 hover:opacity-100 transition-all ease-in-out"
+                        onClick={() => {
+                          //@ts-ignore
+                          if (field.option?.type === "generate_name") {
+                            //@ts-ignore
+                            handleGenerateName(field.name);
+                          }
+                        }}
+                      >
+                        {
+                          //@ts-ignore
+                          field.option?.type === "generate_name"
+                            ? "Generate Name"
+                            : ""
                         }
-                      }}
-                    >
-                      {field.option?.type === "generate_name"
-                        ? "Generate Name"
-                        : ""}
-                    </button>
-                  ) : (
-                    ""
-                  )}
+                      </button>
+                    ) : (
+                      ""
+                    )
+                  }
                 </div>
                 {field.type === "input" ? (
                   <input
